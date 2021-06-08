@@ -13,9 +13,9 @@ def pytest_addoption(parser):
 def setup(request):
     browser = request.config.getoption('browser')
     if browser == 'chrome':
-        driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
+        driver = webdriver.Chrome(executable_path="drivers/chromedriver.exe")
     elif browser == 'edge':
-        driver = webdriver.Chrome(executable_path="C:\\msedgedriver.exe")
+        driver = webdriver.Chrome(executable_path="drivers/msedgedriver.exe")
 
     driver.get("https://swms.prozo.com/auth/login")
     driver.maximize_window()
