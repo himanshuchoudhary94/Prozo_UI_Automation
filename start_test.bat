@@ -1,0 +1,1 @@
+py.test --html=..\reports\report.html
